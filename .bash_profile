@@ -16,7 +16,7 @@ alias ll='ls -l'
 alias l='ll -a'
 alias '..'='cd ..'
 alias 'gprolog'='/opt/local/bin/gprolog'
-alias 'ctags'='/usr/local/bin/ctags'
+#alias 'ctags'='/usr/local/bin/ctags'
 alias grep='grep --color'
 alias touch="$HOME/bin/touch.sh"
 
