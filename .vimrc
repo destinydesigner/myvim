@@ -189,4 +189,3 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-cn,euc-jp,euc-kr,latin1
 
 set laststatus=2
-" set statusline=%F%m%r%h%w\ file:[%{&fenc}\|%{&ff}\|%Y]\ vim:[%{&enc}]\ %=[ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
