@@ -1,3 +1,6 @@
 [submodule "bundle/Vundle.vim"]
 	path = bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim.git
+[submodule "bundle/tagbar_available"]
+	path = bundle/tagbar_available
+	url = https://github.com/majutsushi/tagbar.git

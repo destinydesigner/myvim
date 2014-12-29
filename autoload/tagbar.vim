@@ -1,1 +1,1 @@
-/home/fang/tagbar/autoload/tagbar.vim
+../bundle/tagbar/autoload/tagbar.vim

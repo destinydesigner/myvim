@@ -1,1 +1,1 @@
-/home/fang/tagbar/doc/tagbar.txt
+../bundle/tagbar/doc/tagbar.txt
