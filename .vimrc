@@ -183,6 +183,10 @@ endif
 
 nmap <F1> :!make<CR>
 set pastetoggle=<F2>
+
+let g:tagbar_compact=1
+let g:tagbar_foldlevel=0
+" let g:tagbar_autofocus=0
 nmap <F3> :TagbarToggle<CR>
 
 set encoding=utf-8
