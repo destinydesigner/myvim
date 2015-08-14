@@ -17,6 +17,7 @@ Plugin 'tpope/vim-fireplace'
 " airline
 Plugin 'bling/vim-airline'
 Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'surround.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -188,6 +189,9 @@ let g:tagbar_compact=1
 let g:tagbar_foldlevel=0
 " let g:tagbar_autofocus=0
 nmap <F3> :TagbarToggle<CR>
+nmap <A-Up> :tabnew ./
+nmap <A-Left> :tabprevious<CR>
+nmap <A-Right> :tabnext<CR>
 
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-cn,euc-jp,euc-kr,latin1
