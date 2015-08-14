@@ -14,6 +14,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " clojure
 Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-fugitive'
 " airline
 Plugin 'bling/vim-airline'
 Plugin 'hynek/vim-python-pep8-indent'
@@ -197,3 +198,12 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-cn,euc-jp,euc-kr,latin1
 
 set laststatus=2
+set ttimeoutlen=50
+let g:airline_theme = 'powerlineish'
+let g:airline#extensions#hunks#enabled=0
+let g:airline#extensions#branch#enabled=1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
