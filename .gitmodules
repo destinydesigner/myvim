@@ -4,3 +4,6 @@
 [submodule "bundle/tagbar_available"]
 	path = bundle/tagbar_available
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "fonts"]
+	path = fonts
+	url = https://github.com/powerline/fonts.git
