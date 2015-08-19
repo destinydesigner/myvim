@@ -193,6 +193,8 @@ nmap <F3> :TagbarToggle<CR>
 nmap <A-Up> :tabnew ./
 nmap <A-Left> :tabprevious<CR>
 nmap <A-Right> :tabnext<CR>
+nnoremap <C-Right> :bnext<CR>
+nnoremap <C-Left> :bprevious<CR>
 
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-cn,euc-jp,euc-kr,latin1
