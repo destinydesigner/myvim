@@ -11,13 +11,14 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'vundle'
 " clojure
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
 " airline
 Plugin 'bling/vim-airline'
 Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'Syntastic'
 Plugin 'surround.vim'
 
 " The following are examples of different formats supported.
@@ -203,6 +204,7 @@ let g:airline_theme = 'powerlineish'
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
