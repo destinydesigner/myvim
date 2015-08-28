@@ -12,6 +12,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 " clojure
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
@@ -190,6 +192,7 @@ let g:tagbar_compact=1
 let g:tagbar_foldlevel=0
 " let g:tagbar_autofocus=0
 nmap <F3> :TagbarToggle<CR>
+nmap <F4> :NERDTreeToggle<CR>
 nmap <A-Up> :tabnew ./
 nmap <A-Left> :tabprevious<CR>
 nmap <A-Right> :tabnext<CR>
