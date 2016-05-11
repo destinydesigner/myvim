@@ -13,13 +13,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Syntastic'
+Plugin 'unimpaired.vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-" clojure
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
-" airline
 Plugin 'bling/vim-airline'
 Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'surround.vim'
 
 " The following are examples of different formats supported.
@@ -193,6 +194,7 @@ let g:tagbar_foldlevel=0
 " let g:tagbar_autofocus=0
 nmap <F3> :TagbarToggle<CR>
 nmap <F4> :NERDTreeToggle<CR>
+nmap <F5> :SyntasticCheck<CR>
 nmap <A-Up> :tabnew ./
 nmap <A-Left> :tabprevious<CR>
 nmap <A-Right> :tabnext<CR>
@@ -210,6 +212,20 @@ let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline_powerline_fonts = 1
+
+" settings for Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": ["python"],
+    \ "passive_filetypes": [] }
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
