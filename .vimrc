@@ -20,6 +20,7 @@ Plugin 'bling/vim-airline'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'Syntastic'
 Plugin 'surround.vim'
+Plugin 'fatih/vim-go'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
