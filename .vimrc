@@ -11,14 +11,16 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'vundle'
-" clojure
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Syntastic'
+Plugin 'unimpaired.vim'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
-" airline
 Plugin 'bling/vim-airline'
 Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'Syntastic'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'surround.vim'
 Plugin 'fatih/vim-go'
 
@@ -192,6 +194,8 @@ let g:tagbar_compact=1
 let g:tagbar_foldlevel=0
 " let g:tagbar_autofocus=0
 nmap <F3> :TagbarToggle<CR>
+nmap <F4> :NERDTreeToggle<CR>
+nmap <F5> :SyntasticCheck<CR>
 nmap <A-Up> :tabnew ./
 nmap <A-Left> :tabprevious<CR>
 nmap <A-Right> :tabnext<CR>
@@ -203,14 +207,38 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-cn,euc-jp,euc-kr,latin1
 
 set laststatus=2
 set ttimeoutlen=50
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'myself'
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline_powerline_fonts = 1
 
+" settings for Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": ["python"],
+    \ "passive_filetypes": [] }
+
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
+
+" tmux
+let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_save_on_switch = 1
+
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
