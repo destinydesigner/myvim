@@ -25,4 +25,6 @@ pushd myvim
 git submodule init
 git submodule update
 
+sh ~/myvim/fonts/install.sh
+
 dirs -c
