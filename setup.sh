@@ -25,7 +25,4 @@ pushd myvim
 git submodule init
 git submodule update
 
-pushd bundle/vim-airline/autoload/airline/themes/
-ln -s ~/myvim/airline_themes/myself.vim myself.vim
-
 dirs -c

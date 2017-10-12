@@ -1,0 +1,1 @@
+/Users/fanggj/myvim/airline_themes/myself.vim
